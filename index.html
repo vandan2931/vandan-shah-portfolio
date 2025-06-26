@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vandan Shah | Full-Stack Java Developer</title>
+    <meta name="description" content="Vandan Shah - Full-Stack Java Developer specializing in building secure, scalable web applications with Java, JSP, Servlets, and modern frontend technologies.">
+    <meta name="keywords" content="Java Developer, Full-Stack Developer, Web Developer, JSP, Servlets, MySQL, HTML, CSS, JavaScript">
+    <meta name="author" content="Vandan Shah">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 font-space">
+    <!-- Loading Screen -->
+    <div id="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 transition-opacity duration-500">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-indicator-bar" id="scrollBar"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800/90 text-white p-4 sticky top-0 z-40 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text hover:scale-105 transition-transform">Vandan Shah</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link hover:text-blue-400">Home</a>
+                <a href="about.html" class="nav-link hover:text-blue-400">About</a>
+                <a href="resume.html" class="nav-link hover:text-blue-400">Resume</a>
+                <a href="projects.html" class="nav-link hover:text-blue-400">Projects</a>
+                <a href="contact.html" class="nav-link hover:text-blue-400">Contact</a>
+                <button id="theme-toggle" class="text-gray-300 hover:text-blue-400 focus:outline-none transition-colors">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+            <div class="flex items-center space-x-4 md:hidden">
+                <button id="theme-toggle-mobile" class="text-gray-300 hover:text-blue-400 focus:outline-none transition-colors">
+                    <i class="fas fa-moon" id="theme-icon-mobile"></i>
+                </button>
+                <button class="focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-gray-700/90 backdrop-blur-md" id="mobile-menu">
+            <div class="flex flex-col space-y-3 p-4">
+                <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="resume.html" class="hover:text-blue-400 transition-colors">Resume</a>
+                <a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div id="particles-js" class="absolute inset-0"></div>
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10" data-aos="fade-up">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
+                    Hi, I'm <span class="gradient-text animate-gradient">Vandan Shah</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl mb-6 text-blue-300 font-medium">Full-Stack Java Developer</h2>
+                <p class="text-lg mb-8 text-gray-300 max-w-lg leading-relaxed">
+                    Building secure, scalable web applications with Java, JSP, Servlets, and modern frontend technologies.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="projects.html" class="btn btn-primary transform hover:-translate-y-1">
+                        View My Work <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary transform hover:-translate-y-1">
+                        Contact Me <i class="fas fa-paper-plane ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex items-center space-x-6">
+                    <div class="flex -space-x-2">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 1">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 2">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 3">
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Trusted by developers worldwide</p>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-400 ml-2">4.8/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
+                <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl hover-scale relative group">
+                    <div class="w-full h-full bg-gray-800 flex items-center justify-center">
+                        <!-- <i class="fas fa-user-astronaut text-6xl text-white group-hover:scale-110 transition-transform"></i> -->
+                    <img src="profile1.JPG" alt="">
+                    </div>
+                    <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8"> -->
+                        <!-- <span class="text-white font-medium">Full-Stack Developer</span> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+        
+        <a href="#skills" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white text-2xl">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Skills Highlights -->
+    <section id="skills" class="section bg-gray-800/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="gradient-text">Technical Expertise</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">I've worked with a variety of technologies in the web development world. Here are my core competencies:</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-white">Java</h3>
+                    <p class="text-gray-300 text-center">Core Java, JSP, Servlets, Swing</p>
+                    <div class="mt-6">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm text-gray-400">Expertise</span>
+                            <span class="text-sm font-medium text-blue-400">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full progress-bar-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-white">MySQL</h3>
+                    <p class="text-gray-300 text-center">Database Design & Integration</p>
+                    <div class="mt-6">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm text-gray-400">Expertise</span>
+                            <span class="text-sm font-medium text-blue-400">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full progress-bar-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-white">Frontend</h3>
+                    <p class="text-gray-300 text-center">HTML, CSS, JS, Tailwind</p>
+                    <div class="mt-6">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm text-gray-400">Expertise</span>
+                            <span class="text-sm font-medium text-blue-400">80%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full progress-bar-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-white">MVC & DAO</h3>
+                    <p class="text-gray-300 text-center">Architecture Patterns</p>
+                    <div class="mt-6">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm text-gray-400">Expertise</span>
+                            <span class="text-sm font-medium text-blue-400">88%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full progress-bar-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section bg-gray-900/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="gradient-text">Featured Projects</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Here are some of my recent projects that showcase my skills and expertise</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover-scale group" data-aos="fade-right">
+                    <div class="h-48 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-building text-6xl text-white z-10"></i>
+                        <div class="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-opacity"></div>
+                        <div class="project-overlay opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="projects.html#erp" class="btn btn-primary px-6 py-2 rounded-full">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2 text-white">WayToCode ERP Web Application</h3>
+                        <p class="text-gray-300 mb-4">A dynamic web-based ERP system to manage employees, user profiles, and administrative workflows.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-badge">JSP</span>
+                            <span class="skill-badge">Servlets</span>
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">MVC</span>
+                        </div>
+                        <a href="projects.html#erp" class="text-blue-400 font-semibold hover:underline inline-flex items-center transition-colors">
+                            View Details <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover-scale group" data-aos="fade-left">
+                    <div class="h-48 bg-gradient-to-r from-orange-500 to-yellow-500 flex items-center justify-center relative overflow-hidden">
+                        <i class="fab fa-amazon text-6xl text-white z-10"></i>
+                        <div class="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-opacity"></div>
+                        <div class="project-overlay opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank" class="btn btn-primary px-6 py-2 rounded-full">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2 text-white">Amazon.in Clone</h3>
+                        <p class="text-gray-300 mb-4">A responsive Amazon-style e-commerce web app with product layout, categories, and user authentication.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-badge bg-orange-900">HTML5</span>
+                            <span class="skill-badge bg-orange-900">Tailwind CSS</span>
+                            <span class="skill-badge bg-orange-900">JavaScript</span>
+                        </div>
+                        <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank" class="text-blue-400 font-semibold hover:underline inline-flex items-center transition-colors">
+                            Live Demo <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="projects.html" class="btn btn-primary inline-flex items-center">
+                    View All Projects <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-gray-800/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="gradient-text">What People Say</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Don't just take my word for it. Here's what my colleagues and clients have to say:</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-gray-300 italic">"Vandan demonstrates exceptional problem-solving skills and a strong grasp of Java fundamentals. His attention to detail in implementing MVC architecture is impressive."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="testimonial-avatar">
+                        <div>
+                            <h4 class="text-white font-semibold">John Doe</h4>
+                            <p class="text-gray-400 text-sm">Senior Developer at TechCorp</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-gray-300 italic">"Working with Vandan was a pleasure. He quickly adapts to new requirements and consistently delivers clean, maintainable code with excellent documentation."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Alice Smith" class="testimonial-avatar">
+                        <div>
+                            <h4 class="text-white font-semibold">Alice Smith</h4>
+                            <p class="text-gray-400 text-sm">Project Manager at DevSolutions</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <p class="text-gray-300 italic">"Vandan's ability to bridge frontend and backend development makes him a valuable full-stack developer. His Amazon clone project showcases his UI/UX sensibilities."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Robert Johnson" class="testimonial-avatar">
+                        <div>
+                            <h4 class="text-white font-semibold">Robert Johnson</h4>
+                            <p class="text-gray-400 text-sm">CTO at Startup Innovations</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build Something Amazing?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Let's collaborate on your next project. I'm available for freelance work and full-time positions.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="btn btn-primary bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-700 px-8 py-3">
+                    Get In Touch <i class="fas fa-paper-plane ml-2"></i>
+                </a>
+                <a href="resume.html" class="btn btn-secondary border-white text-white hover:bg-white/10 px-8 py-3">
+                    View Resume <i class="fas fa-file-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-8 lg:mb-0 text-center lg:text-left">
+                    <h3 class="text-2xl font-bold gradient-text mb-2">Vandan Shah</h3>
+                    <p class="text-gray-400">Full-Stack Java Developer</p>
+                    <p class="text-gray-500 mt-4">Building the future, one line of code at a time.</p>
+                </div>
+                <div class="mb-8 lg:mb-0">
+                    <h4 class="text-lg font-semibold mb-4 text-center">Quick Links</h4>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="index.html" class="text-gray-400 hover:text-blue-400 transition">Home</a>
+                        <a href="about.html" class="text-gray-400 hover:text-blue-400 transition">About</a>
+                        <a href="resume.html" class="text-gray-400 hover:text-blue-400 transition">Resume</a>
+                        <a href="projects.html" class="text-gray-400 hover:text-blue-400 transition">Projects</a>
+                        <a href="contact.html" class="text-gray-400 hover:text-blue-400 transition">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-center">Connect With Me</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-2xl transform hover:-translate-y-1">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/vandan2931" target="_blank" class="text-gray-400 hover:text-white transition text-2xl transform hover:-translate-y-1">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:vandanshah074@gmail.com" class="text-gray-400 hover:text-red-400 transition text-2xl transform hover:-translate-y-1">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; <span id="current-year"></span> Vandan Shah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('loading').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeIconMobile = document.getElementById('theme-icon-mobile');
+        const html = document.documentElement;
+        
+        function toggleTheme() {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            
+            themeIcon.classList.toggle('fa-moon', !isDark);
+            themeIcon.classList.toggle('fa-sun', isDark);
+            themeIconMobile.classList.toggle('fa-moon', !isDark);
+            themeIconMobile.classList.toggle('fa-sun', isDark);
+            
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        }
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 
+                          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        html.setAttribute('data-theme', savedTheme);
+        
+        if (savedTheme === 'light') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            themeIconMobile.classList.remove('fa-moon');
+            themeIconMobile.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Initialize particles.js
+        if (document.getElementById('particles-js')) {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#3b82f6"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#3b82f6",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        }
+
+        // Scroll indicator
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollProgress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollBar').style.width = scrollProgress + '%';
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animate progress bars when they come into view
+        const progressBars = document.querySelectorAll('.progress-bar-fill');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        progressBars.forEach(bar => {
+            observer.observe(bar);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Highlight active nav link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}` || 
+                    (current === '' && link.getAttribute('href') === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

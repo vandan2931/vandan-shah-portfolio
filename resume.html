@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Vandan Shah</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 font-space">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 bg-opacity-90 text-white p-4 sticky top-0 z-50 backdrop-blur-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text">Vandan Shah</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link hover:text-blue-400">Home</a>
+                <a href="about.html" class="nav-link hover:text-blue-400">About</a>
+                <a href="resume.html" class="nav-link hover:text-blue-400">Resume</a>
+                <a href="projects.html" class="nav-link hover:text-blue-400">Projects</a>
+                <a href="contact.html" class="nav-link hover:text-blue-400">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-gray-700 bg-opacity-90 backdrop-blur-md" id="mobile-menu">
+            <div class="flex flex-col space-y-3 p-4">
+                <a href="index.html" class="hover:text-blue-400">Home</a>
+                <a href="about.html" class="hover:text-blue-400">About</a>
+                <a href="resume.html" class="hover:text-blue-400">Resume</a>
+                <a href="projects.html" class="hover:text-blue-400">Projects</a>
+                <a href="contact.html" class="hover:text-blue-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resume Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold text-center mb-16 gradient-text">My Resume</h1>
+
+            <div class="glass-card p-8 rounded-xl max-w-5xl mx-auto">
+                <!-- Download Button -->
+                <div class="text-right mb-8">
+                    <a href="vandan_shah_resume.pdf" download class="download-btn">
+                        <i class="fas fa-download mr-2"></i> Download PDF
+                    </a>
+                </div>
+                <!-- Professional Summary -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Professional Summary
+                    </h2>
+                    <ul class="list-disc pl-5 space-y-3 text-gray-300">
+                        <li>Full-Stack Java Developer with 1+ year of training experience in building secure, scalable
+                            web applications.</li>
+                        <li>Expertise in Java, JSP, Servlets, MySQL, and front-end technologies (HTML/CSS/JS).</li>
+                        <li>Proven ability to design MVC-based architectures, implement DAO patterns, and develop
+                            responsive UIs.</li>
+                        <li>Passionate about optimizing performance and delivering clean, maintainable code.</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Education</h2>
+                    <div class="space-y-8">
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-white">Bachelor of Engineering in Computer Science and
+                                Engineering</h3>
+                            <p class="text-gray-400">Narnarayan Shastri Institute of Technology, Ahmedabad, India</p>
+                            <p class="text-gray-500">Apr 2023 | CGPA: 7.20</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-white">Higher Secondary Certificate (HSC)</h3>
+                            <p class="text-gray-400">Prakash high school, Bareja, Ahmedabad, India</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Experience</h2>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold text-white">Full Stack Java Developer Trainee</h3>
+                        <p class="text-gray-400">Way to Code Technologies, Ahmedabad</p>
+                        <p class="text-gray-500">November 2024– Present</p>
+                        <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
+                            <li>Completed hands-on training in core Java, JDBC, JSP, Servlets, and MySQL integration.
+                            </li>
+                            <li>Worked on real-time client projects involving session tracking, form validation, and
+                                image handling.</li>
+                            <li>Collaborated with senior developers on modular and scalable code using DAO and MVC
+                                principles.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Technical Skills
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3 text-white">Programming Languages</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">Java</span>
+                                <span class="skill-badge">C</span>
+                                <span class="skill-badge">C++</span>
+                                <span class="skill-badge">HTML</span>
+                                <span class="skill-badge">CSS</span>
+                                <span class="skill-badge">JavaScript</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3 text-white">Databases</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">MySQL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3 text-white">Frameworks/Tools</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">Java Swing</span>
+                                <span class="skill-badge">JDBC</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3 text-white">Development Tools</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">NetBeans</span>
+                                <span class="skill-badge">VS Code</span>
+                                <span class="skill-badge">Git</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3 text-white">Concepts</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">OOP</span>
+                                <span class="skill-badge">MVC Architecture</span>
+                                <span class="skill-badge">DAO Pattern</span>
+                                <span class="skill-badge">Exception Handling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div>
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Achievements</h2>
+                    <ul class="list-disc pl-5 space-y-3 text-gray-300">
+                        <li>Successfully integrated <span class="text-blue-400">image upload and session
+                                management</span> in Java web apps.</li>
+                        <li>Applied <span class="text-blue-400">DAO pattern</span> to enhance code reusability and
+                            maintainability across projects.</li>
+                        <li>Recognized for <span class="text-blue-400">clean coding practices</span> and problem-solving
+                            during team collaborations.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-8 lg:mb-0 text-center lg:text-left">
+                    <h3 class="text-2xl font-bold gradient-text mb-2">Vandan Shah</h3>
+                    <p class="text-gray-400">Full-Stack Java Developer</p>
+                    <p class="text-gray-500 mt-4">Building the future, one line of code at a time.</p>
+                </div>
+                <div class="mb-8 lg:mb-0">
+                    <h4 class="text-lg font-semibold mb-4 text-center">Quick Links</h4>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="index.html" class="text-gray-400 hover:text-blue-400 transition">Home</a>
+                        <a href="about.html" class="text-gray-400 hover:text-blue-400 transition">About</a>
+                        <a href="resume.html" class="text-gray-400 hover:text-blue-400 transition">Resume</a>
+                        <a href="projects.html" class="text-gray-400 hover:text-blue-400 transition">Projects</a>
+                        <a href="contact.html" class="text-gray-400 hover:text-blue-400 transition">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-center">Connect With Me</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank"
+                            class="text-gray-400 hover:text-blue-400 transition text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/vandan2931" target="_blank"
+                            class="text-gray-400 hover:text-white transition text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:vandanshah074@gmail.com"
+                            class="text-gray-400 hover:text-red-400 transition text-2xl">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Vandan Shah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
