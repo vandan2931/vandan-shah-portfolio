@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Vandan Shah - Front-End Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glass-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .skill-badge {
+            background-color: rgba(55, 65, 81, 0.7);
+            color: #93c5fd;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background-color: #2563eb;
+            color: white;
+            transform: scale(1.05);
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            background-color: rgba(55, 65, 81, 0.7);
+            color: #93c5fd;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(37, 99, 235, 0.7);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-left-color: #3b82f6;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 bg-opacity-90 text-white p-4 sticky top-0 z-50 backdrop-blur-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text">Vandan Shah</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link hover:text-blue-400 transition">Home</a>
+                <a href="about.html" class="nav-link hover:text-blue-400 transition">About</a>
+                <a href="resume.html" class="nav-link hover:text-blue-400 transition">Resume</a>
+                <a href="projects.html" class="nav-link text-blue-400 transition">Projects</a>
+                <a href="contact.html" class="nav-link hover:text-blue-400 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-gray-800 bg-opacity-95 backdrop-blur-md" id="mobile-menu">
+            <div class="flex flex-col space-y-2 p-4">
+                <a href="index.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg transition">Home</a>
+                <a href="about.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg transition">About</a>
+                <a href="resume.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg transition">Resume</a>
+                <a href="projects.html" class="py-2 px-4 bg-gray-700 rounded-lg transition">Projects</a>
+                <a href="contact.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section class="relative py-32 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">My Projects</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">
+                A collection of my front-end development projects showcasing responsive design and interactive features
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-900 to-transparent"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20 bg-gray-800/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <!-- WayToCode ERP Project -->
+            <div class="glass-card p-6 md:p-8 rounded-xl mb-12 hover-scale" data-aos="fade-up">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div class="relative group h-64 rounded-xl overflow-hidden shadow-lg">
+                            <div class="bg-gradient-to-r from-blue-600 to-purple-600 h-full flex items-center justify-center">
+                                <i class="fas fa-building text-6xl text-white"></i>
+                            </div>
+                            <a href="https://github.com/vandan2931/WayToCode-ERP" target="_blank" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="btn-primary">
+                                    <i class="fab fa-github mr-2"></i> View Code
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold text-white">WayToCode ERP Web Application</h2>
+                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm">Frontend</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            Designed and developed responsive, user-friendly web interfaces for employee and admin dashboards using HTML, CSS, JavaScript, and modern UI frameworks.
+                        </p>
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-3 text-blue-400 flex items-center">
+                                <i class="fas fa-star mr-2"></i> Key Features
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Responsive web interfaces
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Reusable components
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Profile image upload preview
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    CRUD form controls
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="skill-badge">HTML5</span>
+                            <span class="skill-badge">CSS3</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge">Tailwind CSS</span>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://github.com/vandan2931/WayToCode-ERP" target="_blank" class="btn-secondary">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News App using React.js -->
+            <div class="glass-card p-6 md:p-8 rounded-xl mb-12 hover-scale" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div class="relative group h-64 rounded-xl overflow-hidden shadow-lg">
+                            <div class="bg-gradient-to-r from-indigo-600 to-blue-600 h-full flex items-center justify-center">
+                                <i class="fas fa-newspaper text-6xl text-white"></i>
+                            </div>
+                            <a href="https://vandan2931.github.io/Newsapp-React/" target="_blank" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="btn-primary">
+                                    <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold text-white">News App using React.js</h2>
+                            <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full text-sm">React</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            Created a dynamic news platform with React.js that fetches headlines via NewsAPI with category filters, pagination, and loading indicators.
+                        </p>
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-3 text-blue-400 flex items-center">
+                                <i class="fas fa-star mr-2"></i> Key Features
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    NewsAPI integration
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Category filters
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Dynamic pagination
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Loading indicators
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="skill-badge">React.js</span>
+                            <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge">NewsAPI</span>
+                            <span class="skill-badge">JavaScript</span>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://vandan2931.github.io/Newsapp-React/" target="_blank" class="btn-primary">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/vandan2931/Newsapp-React" target="_blank" class="btn-secondary">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shoepik Premium Footwear Collection -->
+            <div class="glass-card p-6 md:p-8 rounded-xl mb-12 hover-scale" data-aos="fade-up" data-aos-delay="150">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div class="relative group h-64 rounded-xl overflow-hidden shadow-lg">
+                            <div class="bg-gradient-to-r from-purple-600 to-pink-600 h-full flex items-center justify-center">
+                                <i class="fas fa-shoe-prints text-6xl text-white"></i>
+                            </div>
+                            <a href="https://vandan2931.github.io/Shoepik/" target="_blank" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="btn-primary">
+                                    <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold text-white">Shoepik Premium Footwear Collection</h2>
+                            <span class="bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full text-sm">Frontend</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            Built a responsive e-commerce site with user login/signup, wishlist, cart (via localStorage), and carousel banners using HTML5, Bootstrap, and JavaScript.
+                        </p>
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-3 text-blue-400 flex items-center">
+                                <i class="fas fa-star mr-2"></i> Key Features
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    User authentication
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Wishlist functionality
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Shopping cart
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Carousel banners
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="skill-badge">HTML5</span>
+                            <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">LocalStorage</span>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://vandan2931.github.io/Shoepik/" target="_blank" class="btn-primary">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/vandan2931/Shoepik" target="_blank" class="btn-secondary">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amazon.in Clone -->
+            <div class="glass-card p-6 md:p-8 rounded-xl mb-12 hover-scale" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div class="relative group h-64 rounded-xl overflow-hidden shadow-lg">
+                            <div class="bg-gradient-to-r from-orange-500 to-yellow-500 h-full flex items-center justify-center">
+                                <i class="fab fa-amazon text-6xl text-white"></i>
+                            </div>
+                            <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="btn-primary">
+                                    <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold text-white">Amazon.in Clone</h2>
+                            <span class="bg-orange-500/10 text-orange-400 px-3 py-1 rounded-full text-sm">Frontend</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            A responsive e-commerce platform clone featuring product listings, categories, user authentication, and shopping cart functionality.
+                        </p>
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-3 text-blue-400 flex items-center">
+                                <i class="fas fa-star mr-2"></i> Key Features
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Auto-rotating carousel
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Product categories
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    User authentication
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Shopping cart
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="skill-badge">HTML5</span>
+                            <span class="skill-badge">Tailwind CSS</span>
+                            <span class="skill-badge">JavaScript</span>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank" class="btn-primary">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/vandan2931/Amazon.in-Clone" target="_blank" class="btn-secondary">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Website -->
+            <div class="glass-card p-6 md:p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="250">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div class="relative group h-64 rounded-xl overflow-hidden shadow-lg">
+                            <div class="bg-gradient-to-r from-green-600 to-teal-600 h-full flex items-center justify-center">
+                                <i class="fas fa-user-tie text-6xl text-white"></i>
+                            </div>
+                            <a href="https://vandan2931.github.io/vandan-shah-portfolio/" target="_blank" class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="btn-primary">
+                                    <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold text-white">Portfolio Website</h2>
+                            <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-sm">Frontend</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            A personal portfolio website showcasing my skills, projects, and professional information with responsive design and smooth animations.
+                        </p>
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-3 text-blue-400 flex items-center">
+                                <i class="fas fa-star mr-2"></i> Key Features
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Responsive design
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Project showcase
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Contact form
+                                </li>
+                                <li class="flex items-start text-gray-300">
+                                    <i class="fas fa-check text-blue-400 mr-2 mt-1"></i>
+                                    Smooth animations
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="skill-badge">HTML5</span>
+                            <span class="skill-badge">CSS3</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">Tailwind CSS</span>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://vandan2931.github.io/vandan-shah-portfolio/" target="_blank" class="btn-primary">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/vandan2931/vandan-shah-portfolio" target="_blank" class="btn-secondary">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Want to See More?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Check out my GitHub profile for additional projects and code samples.</p>
+            <a href="https://github.com/vandan2931" target="_blank" class="btn-primary inline-flex items-center mx-auto">
+                <i class="fab fa-github mr-2"></i> Visit My GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-8 lg:mb-0 text-center lg:text-left">
+                    <h3 class="text-2xl font-bold gradient-text mb-2">Vandan Shah</h3>
+                    <p class="text-gray-400">Front-End Developer</p>
+                    <p class="text-gray-500 mt-4">Building the future, one line of code at a time.</p>
+                </div>
+                <div class="mb-8 lg:mb-0">
+                    <h4 class="text-lg font-semibold mb-4 text-center">Quick Links</h4>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="index.html" class="text-gray-400 hover:text-blue-400 transition">Home</a>
+                        <a href="about.html" class="text-gray-400 hover:text-blue-400 transition">About</a>
+                        <a href="resume.html" class="text-gray-400 hover:text-blue-400 transition">Resume</a>
+                        <a href="projects.html" class="text-gray-400 hover:text-blue-400 transition">Projects</a>
+                        <a href="contact.html" class="text-gray-400 hover:text-blue-400 transition">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-center">Connect With Me</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/vandan2931" target="_blank" class="text-gray-400 hover:text-white transition text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:vandanshah074@gmail.com" class="text-gray-400 hover:text-red-400 transition text-2xl">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Vandan Shah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>

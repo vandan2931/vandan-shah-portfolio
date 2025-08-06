@@ -1,0 +1,1248 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #3b82f6;
+    --primary-light: #60a5fa;
+    --primary-dark: #2563eb;
+    --secondary: #10b981;
+    --secondary-light: #34d399;
+    --secondary-dark: #059669;
+    --dark: #0f172a;
+    --darker: #020617;
+    --light: #f8fafc;
+    --lighter: #ffffff;
+    --accent: #8b5cf6;
+    --accent-light: #a78bfa;
+    --accent-dark: #7c3aed;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1e293b;
+    --gray-900: #0f172a;
+}
+
+[data-theme="light"] {
+    --dark: #f8fafc;
+    --darker: #f1f5f9;
+    --light: #0f172a;
+    --lighter: #020617;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --gray-100: #0f172a;
+    --gray-200: #1e293b;
+    --gray-300: #334155;
+    --gray-400: #475569;
+    --gray-500: #64748b;
+    --gray-600: #94a3b8;
+    --gray-700: #cbd5e1;
+    --gray-800: #e2e8f0;
+    --gray-900: #f1f5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--dark);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+.font-space {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-light);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+/* Background Patterns */
+.bg-grid-pattern {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.bg-dot-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 25px 25px;
+}
+
+/* Futuristic Glass Card Effect */
+.glass-card {
+    background: rgba(30, 41, 59, 0.25);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.1) 0%,
+        rgba(139, 92, 246, 0.1) 100%
+    );
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .glass-card {
+    background: rgba(248, 250, 252, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+/* Add this to your styles.css */
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+/* Futuristic Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.btn-primary {
+    background: transparent;
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary::before {
+    transform: scaleX(1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.btn-secondary:hover::before {
+    left: 100%;
+}
+
+.btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--gray-600);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Holographic Hover Effect */
+.holographic-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic-hover::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 45%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 55%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.holographic-hover:hover::after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+}
+/* Add this to your styles.css */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+}
+/* Add this to your styles.css */
+.live-demo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    text-decoration: none;
+}
+
+.live-demo-btn:hover {
+    background: rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Hover Scale Effect with Depth */
+.hover-scale {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.hover-scale:hover {
+    transform: translateY(-10px) scale(1.03) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Navigation Link Effect with Futuristic Glow */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+/* Futuristic Skill Badges */
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(59, 130, 246, 0.2);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    gap: 0.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.skill-badge:hover::before {
+    transform: translateX(100%);
+}
+
+.skill-badge:hover {
+    transform: scale(1.05);
+    background-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.skill-badge i {
+    font-size: 0.75rem;
+}
+
+/* Futuristic Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border: 3px solid var(--dark);
+    z-index: 1;
+    box-shadow: 0 0 10px var(--primary);
+    animation: pulse 2s infinite;
+}
+
+[data-theme="light"] .timeline-item::before {
+    border-color: var(--light);
+}
+
+/* Futuristic Progress Bars */
+.progress-bar {
+    height: 0.5rem;
+    background-color: rgba(59, 130, 246, 0.2);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.progress-bar:hover::after {
+    opacity: 1;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 0.25rem;
+    transition: width 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shine 2s infinite;
+}
+
+/* Tooltip with Futuristic Glow */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--gray-800);
+    color: var(--text-primary);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Futuristic Profile Image */
+.profile-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+.profile-image-container:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profile-image-container:hover .profile-image {
+    transform: scale(1.1);
+}
+
+.profile-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.profile-fallback i {
+    font-size: 3rem;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+/* Section Styling with Futuristic Elements */
+.section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    margin: 1rem auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--primary);
+}
+
+/* Futuristic Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+    z-index: 1;
+}
+
+/* Futuristic Project Cards */
+.project-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(59, 130, 246, 0.1) 0%,
+        rgba(139, 92, 246, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Futuristic Testimonial Cards */
+.testimonial-card {
+    position: relative;
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 4rem;
+    color: rgba(59, 130, 246, 0.1);
+    font-family: serif;
+    line-height: 1;
+}
+
+.testimonial-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.05) 0%,
+        rgba(139, 92, 246, 0.05) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.testimonial-card:hover::after {
+    opacity: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.testimonial-rating {
+    color: var(--warning);
+    margin-top: 0.5rem;
+    text-shadow: 0 0 5px rgba(245, 158, 11, 0.5);
+}
+
+/* Futuristic Contact Form */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-600);
+    background-color: var(--gray-700);
+    color: var(--text-primary);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2), 0 0 20px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Futuristic Alert Messages */
+.alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.alert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+}
+
+.alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.alert-success::before {
+    background: var(--success);
+}
+
+.alert-error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.alert-error::before {
+    background: var(--danger);
+}
+
+.alert i {
+    margin-right: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+/* Futuristic Loading Animation */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    perspective: 1000px;
+}
+
+.loader-square {
+    width: 1rem;
+    height: 3rem;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    animation: loaderAnimation 1.2s infinite ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.loader-square:nth-child(1) { animation-delay: 0s; }
+.loader-square:nth-child(2) { animation-delay: 0.15s; }
+.loader-square:nth-child(3) { animation-delay: 0.3s; }
+.loader-square:nth-child(4) { animation-delay: 0.45s; }
+.loader-square:nth-child(5) { animation-delay: 0.6s; }
+
+@keyframes loaderAnimation {
+    0%, 40%, 100% { 
+        transform: scaleY(0.6) rotateX(45deg);
+    }
+    20% { 
+        transform: scaleY(1) rotateX(0);
+    }
+}
+
+/* Futuristic Scroll Indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(59, 130, 246, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.scroll-indicator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shine 2s infinite;
+}
+
+.scroll-indicator-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    width: 0%;
+    transition: width 0.1s ease;
+    position: relative;
+    z-index: 1;
+}
+/* Add this to your styles.css */
+.send-message-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    width: 100%;
+    text-decoration: none;
+}
+
+.send-message-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+}
+
+/* Futuristic Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.back-to-top::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+}
+
+.back-to-top:hover::before {
+    opacity: 0.8;
+}
+
+/* Particles.js Container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Futuristic Animations */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg);
+    }
+    50% { 
+        transform: translateY(-10px) rotate(2deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    40% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    60% {
+        transform: translateY(-10px) rotate(-5deg);
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes hologram {
+    0% {
+        opacity: 0.1;
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(-5px) rotate(2deg);
+    }
+    100% {
+        opacity: 0.1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes neon-glow {
+    0%, 100% {
+        text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary);
+    }
+    50% {
+        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--accent);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-800);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--primary), var(--accent));
+    border-radius: 10px;
+    border: 2px solid var(--gray-800);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(var(--primary-light), var(--accent-light));
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    
+    .glass-card {
+        backdrop-filter: blur(10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .timeline::before {
+        display: none;
+    }
+    
+    .timeline-item {
+        padding-left: 0;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 6rem 0;
+    }
+    
+    .glass-card {
+        backdrop-filter: blur(8px);
+    }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .section-title::after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .glass-card {
+        backdrop-filter: blur(5px);
+    }
+}
+
+/* Special Futuristic Elements */
+.neon-text {
+    animation: neon-glow 2s infinite alternate;
+}
+
+.holographic-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.1) 0%,
+        rgba(139, 92, 246, 0.1) 50%,
+        rgba(59, 130, 246, 0.1) 100%
+    );
+    animation: hologram 6s infinite;
+    z-index: -1;
+}
+
+/* Grid Pattern Animation */
+.animated-grid {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 20px;
+    }
+}

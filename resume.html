@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Vandan Shah</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glass-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .skill-badge {
+            background-color: rgba(55, 65, 81, 0.7);
+            color: #93c5fd;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background-color: #2563eb;
+            color: white;
+            transform: scale(1.05);
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(55, 65, 81, 0.5);
+        }
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        .project-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-left-color: #3b82f6;
+            background: rgba(55, 65, 81, 0.3);
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .contact-info {
+            transition: all 0.3s ease;
+        }
+        .contact-info:hover {
+            color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 bg-opacity-90 text-white p-4 sticky top-0 z-50 backdrop-blur-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text">Vandan Shah</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link hover:text-blue-400 transition">Home</a>
+                <a href="about.html" class="nav-link hover:text-blue-400 transition">About</a>
+                <a href="resume.html" class="nav-link text-blue-400 transition">Resume</a>
+                <a href="projects.html" class="nav-link hover:text-blue-400 transition">Projects</a>
+                <a href="contact.html" class="nav-link hover:text-blue-400 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-gray-800 bg-opacity-95 backdrop-blur-md" id="mobile-menu">
+            <div class="flex flex-col space-y-2 p-4">
+                <a href="index.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg transition">Home</a>
+                <a href="about.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg transition">About</a>
+                <a href="resume.html" class="py-2 px-4 bg-gray-700 rounded-lg transition">Resume</a>
+                <a href="projects.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg transition">Projects</a>
+                <a href="contact.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resume Section -->
+    <section class="py-12 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Vandan Shah</h1>
+                <div class="flex flex-wrap justify-center gap-4 text-gray-300">
+                    <a href="tel:+917284091318" class="contact-info flex items-center">
+                        <i class="fas fa-phone mr-2"></i> +91 7284091318
+                    </a>
+                    <a href="mailto:vandanshah074@gmail.com" class="contact-info flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> vandanshah074@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank" class="contact-info flex items-center">
+                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/vandan2931" target="_blank" class="contact-info flex items-center">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-4 md:p-8 rounded-xl max-w-5xl mx-auto">
+                <!-- Download Button -->
+                <div class="text-right mb-8">
+                    <a href="vandan_shah_Frontend_resume .pdf" download class="download-btn">
+                        <i class="fas fa-download mr-2"></i> Download PDF
+                    </a>
+                </div>
+                
+                <!-- Professional Summary -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold gradient-text mb-4 pb-2 border-b border-gray-700">Professional Summary</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-300 leading-relaxed">
+                        <li>Front-End Developer with 1+ years of experience building responsive and user-friendly web applications using HTML5, CSS3, JavaScript (ES6+) and React.</li>
+                        <li>Proficient in developing scalable UIs, integrating REST APIs, and optimizing performance.</li>
+                        <li>Known for clean code practices and attention to UI detail.</li>
+                        <li>Collaborative team player experienced in agile development environments.</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Education</h2>
+                    <div class="space-y-6">
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-white mb-1">Bachelor of Engineering in Computer Science and Engineering</h3>
+                            <p class="text-gray-400 mb-1">Narnarayan Shastri Institute of Technology, Ahmedabad, India</p>
+                            <p class="text-gray-500 text-sm">Apr 2023 | CGPA: 7.20</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-white mb-1">Higher Secondary Certificate (HSC)</h3>
+                            <p class="text-gray-400">Prakash high school, Bareja, Ahmedabad, India | Percentage: 64%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Experience</h2>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold text-white mb-1">Front-End Developer</h3>
+                        <p class="text-gray-400 mb-1">Way to Code Technologies, Ahmedabad</p>
+                        <p class="text-gray-500 text-sm mb-3">June 2024– Present</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>Developed 5+ interactive and responsive UIs using HTML, CSS, and JavaScript, enhancing user experience and engagement by 30%.</li>
+                            <li>Built dynamic and reusable React components integrated with REST APIs to display real-time backend data.</li>
+                            <li>Implemented modular UI elements such as form validations, image upload previews, and a cart system using localStorage.</li>
+                            <li>Optimized layouts using Flexbox and CSS Grid to ensure consistent performance across modern browsers and devices.</li>
+                            <li>Collaborated with backend developers and UI/UX designers using Git for version control.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Technical Skills</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="skill-category">
+                            <h3 class="text-lg font-semibold mb-3 text-white border-b border-gray-700 pb-2">Languages</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">HTML5</span>
+                                <span class="skill-badge">CSS3</span>
+                                <span class="skill-badge">JavaScript (ES6+)</span>
+                                <span class="skill-badge">Java</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="text-lg font-semibold mb-3 text-white border-b border-gray-700 pb-2">Frameworks</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">React.js</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="text-lg font-semibold mb-3 text-white border-b border-gray-700 pb-2">Tools</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">Git</span>
+                                <span class="skill-badge">GitHub</span>
+                                <span class="skill-badge">VS Code</span>
+                                <span class="skill-badge">NetBeans</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="text-lg font-semibold mb-3 text-white border-b border-gray-700 pb-2">Concepts</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">Responsive Design</span>
+                                <span class="skill-badge">Flexbox</span>
+                                <span class="skill-badge">CSS Grid</span>
+                                <span class="skill-badge">LocalStorage</span>
+                                <span class="skill-badge">API Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Projects</h2>
+                    <div class="space-y-8">
+                        <div class="project-card p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-white mb-2">Shoepik Premium Footwear Collection</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="skill-badge">HTML5</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">JavaScript</span>
+                            </div>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                                <li>Built a responsive e-commerce site with user login/signup, wishlist, cart (via localStorage), and carousel banners</li>
+                                <li>Implemented user management system with login/signup functionality, wishlist counters, and shopping cart</li>
+                            </ul>
+                            <a href="https://vandan2931.github.io/Shoepik/" target="_blank" class="inline-block mt-3 text-blue-400 hover:text-blue-300 transition">
+                                <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                            </a>
+                        </div>
+
+                        <div class="project-card p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-white mb-2">News App using React.js</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="skill-badge">React.js</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">NewsAPI</span>
+                            </div>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                                <li>Created a dynamic news platform with React.js that fetches headlines via NewsAPI</li>
+                                <li>Implemented category filters, pagination, loading spinners, and error handling</li>
+                                <li>Added dynamic routing with pagination for multi-page article navigation</li>
+                            </ul>
+                            <a href="https://vandan2931.github.io/Newsapp-React/" target="_blank" class="inline-block mt-3 text-blue-400 hover:text-blue-300 transition">
+                                <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                            </a>
+                        </div>
+
+                        <div class="project-card p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold text-white mb-2">WayToCode ERP Web Application</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="skill-badge">HTML5</span>
+                                <span class="skill-badge">CSS3</span>
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">Tailwind CSS</span>
+                            </div>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                                <li>Designed and developed responsive, user-friendly web interfaces for employee and admin dashboards</li>
+                                <li>Built reusable components such as forms, tables, and navigation bars with client-side validation</li>
+                                <li>Implemented features like profile image upload preview and interactive input validations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Achievements</h2>
+                    <ul class="list-disc pl-5 space-y-3 text-gray-300">
+                        <li>Delivered 5+ frontend projects applying modern UX/UI principles</li>
+                        <li>Recognized for pixel-perfect designs and fast prototyping</li>
+                        <li>Applied accessibility and responsive design best practices</li>
+                    </ul>
+                </div>
+
+                <!-- Strengths -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Strengths</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <span class="text-green-400 mr-2 mt-1">✔</span>
+                            <span class="text-gray-300">Adaptable to new technologies</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-400 mr-2 mt-1">✔</span>
+                            <span class="text-gray-300">Strong analytical & problem-solving skills</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-400 mr-2 mt-1">✔</span>
+                            <span class="text-gray-300">Leadership & project management</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-400 mr-2 mt-1">✔</span>
+                            <span class="text-gray-300">Excellent teamwork & communication</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Details -->
+                <div>
+                    <h2 class="text-2xl font-bold gradient-text mb-6 pb-2 border-b border-gray-700">Personal Details</h2>
+                    <div class="grid md:grid-cols-2 gap-4 text-gray-300">
+                        <div>
+                            <span class="font-medium">Date of Birth:</span> 29/03/2001
+                        </div>
+                        <div>
+                            <span class="font-medium">Languages Known:</span> English, Hindi, Gujarati
+                        </div>
+                        <div>
+                            <span class="font-medium">Hobbies:</span> Traveling, listening to music, reading, playing cricket
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-8 lg:mb-0 text-center lg:text-left">
+                    <h3 class="text-2xl font-bold gradient-text mb-2">Vandan Shah</h3>
+                    <p class="text-gray-400">Front-End Developer</p>
+                    <p class="text-gray-500 mt-4">Building the future, one line of code at a time.</p>
+                </div>
+                <div class="mb-8 lg:mb-0">
+                    <h4 class="text-lg font-semibold mb-4 text-center">Quick Links</h4>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="index.html" class="text-gray-400 hover:text-blue-400 transition py-1">Home</a>
+                        <a href="about.html" class="text-gray-400 hover:text-blue-400 transition py-1">About</a>
+                        <a href="resume.html" class="text-gray-400 hover:text-blue-400 transition py-1">Resume</a>
+                        <a href="projects.html" class="text-gray-400 hover:text-blue-400 transition py-1">Projects</a>
+                        <a href="contact.html" class="text-gray-400 hover:text-blue-400 transition py-1">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-center">Connect With Me</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank"
+                            class="text-gray-400 hover:text-blue-400 transition text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/vandan2931" target="_blank"
+                            class="text-gray-400 hover:text-white transition text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:vandanshah074@gmail.com"
+                            class="text-gray-400 hover:text-red-400 transition text-2xl">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Vandan Shah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
