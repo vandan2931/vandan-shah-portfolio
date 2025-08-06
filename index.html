@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vandan Shah | Front-End Developer</title>
-    <meta name="description" content="Vandan Shah - Front-End Developer specializing in building responsive, accessible web applications with modern JavaScript frameworks and CSS.">
+    <meta name="description"
+        content="Vandan Shah - Front-End Developer specializing in building responsive, accessible web applications with modern JavaScript frameworks and CSS.">
     <meta name="keywords" content="Front-End Developer, Web Developer, React, JavaScript, HTML, CSS, Tailwind, UI/UX">
     <meta name="author" content="Vandan Shah">
-    
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    
+
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body class="bg-gray-900 font-space">
     <!-- Loading Screen -->
-    <div id="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 transition-opacity duration-500">
+    <div id="loading"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 transition-opacity duration-500">
         <div class="loader">
             <div class="loader-square"></div>
             <div class="loader-square"></div>
@@ -50,19 +56,22 @@
     <!-- Navigation -->
     <nav class="bg-gray-800/90 text-white p-4 sticky top-0 z-40 backdrop-blur-md shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold gradient-text hover:scale-105 transition-transform">Vandan Shah</a>
+            <a href="index.html" class="text-2xl font-bold gradient-text hover:scale-105 transition-transform">Vandan
+                Shah</a>
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="nav-link hover:text-blue-400">Home</a>
                 <a href="about.html" class="nav-link hover:text-blue-400">About</a>
                 <a href="resume.html" class="nav-link hover:text-blue-400">Resume</a>
                 <a href="projects.html" class="nav-link hover:text-blue-400">Projects</a>
                 <a href="contact.html" class="nav-link hover:text-blue-400">Contact</a>
-                <button id="theme-toggle" class="text-gray-300 hover:text-blue-400 focus:outline-none transition-colors">
-                    <i class="fas fa-moon" id="theme-icon"></i>
+                <button id="theme-toggle"
+                    class="text-gray-300 hover:text-blue-400 focus:outline-none transition-colors">
+                    <!-- <i class="fas fa-moon" id="theme-icon"></i> -->
                 </button>
             </div>
             <div class="flex items-center space-x-4 md:hidden">
-                <button id="theme-toggle-mobile" class="text-gray-300 hover:text-blue-400 focus:outline-none transition-colors">
+                <button id="theme-toggle-mobile"
+                    class="text-gray-300 hover:text-blue-400 focus:outline-none transition-colors">
                     <i class="fas fa-moon" id="theme-icon-mobile"></i>
                 </button>
                 <button class="focus:outline-none" id="menu-toggle">
@@ -88,7 +97,7 @@
         <div class="absolute inset-0 opacity-20">
             <div class="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
         </div>
-        
+
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10" data-aos="fade-up">
             <div class="md:w-1/2 mb-12 md:mb-0">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
@@ -96,7 +105,8 @@
                 </h1>
                 <h2 class="text-2xl md:text-3xl mb-6 text-blue-300 font-medium">Front-End Developer</h2>
                 <p class="text-lg mb-8 text-gray-300 max-w-lg leading-relaxed">
-                    Creating beautiful, responsive, and accessible web experiences with modern JavaScript and CSS frameworks.
+                    Creating beautiful, responsive, and accessible web experiences with modern JavaScript and CSS
+                    frameworks.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="projects.html" class="btn btn-primary transform hover:-translate-y-1">
@@ -106,12 +116,15 @@
                         Contact Me <i class="fas fa-paper-plane ml-2"></i>
                     </a>
                 </div>
-                
+
                 <div class="mt-12 flex items-center space-x-6">
                     <div class="flex -space-x-2">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 1">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 2">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 3">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 1">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 2">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 3">
                     </div>
                     <div>
                         <p class="text-sm text-gray-400">Trusted by clients worldwide</p>
@@ -126,17 +139,19 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
-                <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl hover-scale relative group">
+                <div
+                    class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl hover-scale relative group">
                     <div class="w-full h-full bg-gray-800 flex items-center justify-center">
                         <img src="profile1.JPG" alt="Vandan Shah - Front-End Developer">
                     </div>
                 </div>
             </div>
         </div>
-        
-        <a href="#skills" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white text-2xl">
+
+        <a href="#skills"
+            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white text-2xl">
             <i class="fas fa-chevron-down"></i>
         </a>
     </section>
@@ -146,9 +161,10 @@
         <div class="container mx-auto px-4">
             <div class="section-title" data-aos="fade-up">
                 <h2 class="gradient-text">Technical Expertise</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">I specialize in modern front-end technologies to create engaging user experiences:</p>
+                <p class="text-gray-400 max-w-2xl mx-auto">I specialize in modern front-end technologies to create
+                    engaging user experiences:</p>
             </div>
-            
+
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-blue-400 mb-4 text-5xl flex justify-center">
@@ -166,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-blue-400 mb-4 text-5xl flex justify-center">
                         <i class="fab fa-js"></i>
@@ -183,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-blue-400 mb-4 text-5xl flex justify-center">
                         <i class="fab fa-css3-alt"></i>
@@ -200,7 +216,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="400">
                     <div class="text-blue-400 mb-4 text-5xl flex justify-center">
                         <i class="fas fa-mobile-alt"></i>
@@ -226,37 +242,45 @@
         <div class="container mx-auto px-4">
             <div class="section-title" data-aos="fade-up">
                 <h2 class="gradient-text">Featured Projects</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Here are some of my recent projects that showcase my front-end development skills</p>
+                <p class="text-gray-400 max-w-2xl mx-auto">Here are some of my recent projects that showcase my
+                    front-end development skills</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover-scale group" data-aos="fade-right">
-                    <div class="h-48 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center relative overflow-hidden">
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover-scale group"
+                    data-aos="fade-right">
+                    <div
+                        class="h-48 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center relative overflow-hidden">
                         <i class="fas fa-shopping-cart text-6xl text-white z-10"></i>
                         <div class="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-opacity"></div>
                         <div class="project-overlay opacity-0 group-hover:opacity-100 transition-opacity">
-                            <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank" class="btn btn-primary px-6 py-2 rounded-full">
+                            <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank"
+                                class="btn btn-primary px-6 py-2 rounded-full">
                                 Live Demo
                             </a>
                         </div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-xl font-bold mb-2 text-white">Amazon.in Clone</h3>
-                        <p class="text-gray-300 mb-4">A responsive Amazon-style e-commerce web app with product layout, categories, and user authentication.</p>
+                        <p class="text-gray-300 mb-4">A responsive Amazon-style e-commerce web app with product layout,
+                            categories, and user authentication.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="skill-badge">HTML5</span>
                             <span class="skill-badge">Tailwind CSS</span>
                             <span class="skill-badge">JavaScript</span>
                             <span class="skill-badge">Responsive Design</span>
                         </div>
-                        <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank" class="text-blue-400 font-semibold hover:underline inline-flex items-center transition-colors">
+                        <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank"
+                            class="text-blue-400 font-semibold hover:underline inline-flex items-center transition-colors">
                             Live Demo <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
                 </div>
-                
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover-scale group" data-aos="fade-left">
-                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center relative overflow-hidden">
+
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover-scale group"
+                    data-aos="fade-left">
+                    <div
+                        class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center relative overflow-hidden">
                         <i class="fas fa-tasks text-6xl text-white z-10"></i>
                         <div class="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-opacity"></div>
                         <div class="project-overlay opacity-0 group-hover:opacity-100 transition-opacity">
@@ -266,21 +290,26 @@
                         </div>
                     </div>
                     <div class="p-8">
-                        <h3 class="text-xl font-bold mb-2 text-white">Task Management App</h3>
-                        <p class="text-gray-300 mb-4">A React-based task management application with drag-and-drop functionality and local storage.</p>
+                        <h3 class="text-xl font-bold mb-2 text-white">WayToCode ERP Web Application</h3>
+                        <p class="text-gray-300 mb-4">Designed and developed responsive, user-friendly web interfaces
+                            for employee and admin
+                            dashboards using HTML, CSS, JavaScript, and modern UI frameworks.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-badge bg-green-900">React</span>
-                            <span class="skill-badge bg-green-900">TypeScript</span>
-                            <span class="skill-badge bg-green-900">Tailwind</span>
-                            <span class="skill-badge bg-green-900">DnD Kit</span>
+                            <span class="skill-badge bg-green-900">HTML5</span>
+                            <span class="skill-badge bg-green-900">CSS3</span>
+                            <span class="skill-badge bg-green-900">JavaScript</span>
+                            <span class="skill-badge bg-green-900">Bootstrap</span>
+                            <span class="skill-badge bg-green-900">Tailwind CSS</span>
                         </div>
-                        <a href="projects.html#taskmanager" class="text-blue-400 font-semibold hover:underline inline-flex items-center transition-colors">
-                            View Details <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        <a href="https://vandan2931.github.io/ERP-System-WayToCode/"
+                            class="text-blue-400 font-semibold hover:underline inline-flex items-center transition-colors">
+                            View Code <i
+                                class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12" data-aos="fade-up">
                 <a href="projects.html" class="btn btn-primary inline-flex items-center">
                     View All Projects <i class="fas fa-chevron-right ml-2"></i>
@@ -359,9 +388,11 @@
     <section class="section bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build Something Amazing?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Let's collaborate on your next project. I'm available for freelance work and full-time positions.</p>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Let's collaborate on your next project. I'm
+                available for freelance work and full-time positions.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="contact.html" class="btn btn-primary bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-700 px-8 py-3">
+                <a href="contact.html"
+                    class="btn btn-primary bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-700 px-8 py-3">
                     Get In Touch <i class="fas fa-paper-plane ml-2"></i>
                 </a>
                 <a href="resume.html" class="btn btn-secondary border-white text-white hover:bg-white/10 px-8 py-3">
@@ -393,13 +424,16 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-center">Connect With Me</h4>
                     <div class="flex justify-center space-x-6">
-                        <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-2xl transform hover:-translate-y-1">
+                        <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank"
+                            class="text-gray-400 hover:text-blue-400 transition text-2xl transform hover:-translate-y-1">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/vandan2931" target="_blank" class="text-gray-400 hover:text-white transition text-2xl transform hover:-translate-y-1">
+                        <a href="https://github.com/vandan2931" target="_blank"
+                            class="text-gray-400 hover:text-white transition text-2xl transform hover:-translate-y-1">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="mailto:vandanshah074@gmail.com" class="text-gray-400 hover:text-red-400 transition text-2xl transform hover:-translate-y-1">
+                        <a href="mailto:vandanshah074@gmail.com"
+                            class="text-gray-400 hover:text-red-400 transition text-2xl transform hover:-translate-y-1">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -417,17 +451,17 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
     <script>
         // Loading screen
-        window.addEventListener('load', function() {
-            setTimeout(function() {
+        window.addEventListener('load', function () {
+            setTimeout(function () {
                 document.getElementById('loading').style.opacity = '0';
-                setTimeout(function() {
+                setTimeout(function () {
                     document.getElementById('loading').style.display = 'none';
                 }, 500);
             }, 1000);
         });
 
         // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('menu-toggle').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -438,31 +472,31 @@
         const themeIcon = document.getElementById('theme-icon');
         const themeIconMobile = document.getElementById('theme-icon-mobile');
         const html = document.documentElement;
-        
+
         function toggleTheme() {
             const isDark = html.getAttribute('data-theme') === 'dark';
             html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-            
+
             themeIcon.classList.toggle('fa-moon', !isDark);
             themeIcon.classList.toggle('fa-sun', isDark);
             themeIconMobile.classList.toggle('fa-moon', !isDark);
             themeIconMobile.classList.toggle('fa-sun', isDark);
-            
+
             localStorage.setItem('theme', isDark ? 'light' : 'dark');
         }
-        
+
         // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme') || 
-                          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        const savedTheme = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
         html.setAttribute('data-theme', savedTheme);
-        
+
         if (savedTheme === 'light') {
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
             themeIconMobile.classList.remove('fa-moon');
             themeIconMobile.classList.add('fa-sun');
         }
-        
+
         themeToggle.addEventListener('click', toggleTheme);
         themeToggleMobile.addEventListener('click', toggleTheme);
 
@@ -587,7 +621,7 @@
         }
 
         // Scroll indicator
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollProgress = (scrollTop / scrollHeight) * 100;
@@ -596,7 +630,7 @@
 
         // Back to top button
         const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.pageYOffset > 300) {
                 backToTop.classList.add('visible');
             } else {
@@ -604,7 +638,7 @@
             }
         });
 
-        backToTop.addEventListener('click', function() {
+        backToTop.addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -632,11 +666,11 @@
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -650,10 +684,10 @@
         // Highlight active nav link
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', function() {
+
+        window.addEventListener('scroll', function () {
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
@@ -661,10 +695,10 @@
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}` || 
+                if (link.getAttribute('href') === `#${current}` ||
                     (current === '' && link.getAttribute('href') === 'index.html')) {
                     link.classList.add('active');
                 }
@@ -672,4 +706,5 @@
         });
     </script>
 </body>
+
 </html>
