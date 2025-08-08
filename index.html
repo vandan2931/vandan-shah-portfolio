@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -64,16 +64,8 @@
                 <a href="resume.html" class="nav-link hover:text-blue-400">Resume</a>
                 <a href="projects.html" class="nav-link hover:text-blue-400">Projects</a>
                 <a href="contact.html" class="nav-link hover:text-blue-400">Contact</a>
-                <button id="theme-toggle"
-                    class="text-gray-300 hover:text-blue-400 focus:outline-none transition-colors">
-                    <i class="fas fa-moon" id="theme-icon"></i> 
-                </button>
             </div>
             <div class="flex items-center space-x-4 md:hidden">
-                <button id="theme-toggle-mobile"
-                    class="text-gray-300 hover:text-blue-400 focus:outline-none transition-colors">
-                    <i class="fas fa-moon" id="theme-icon-mobile"></i>
-                </button>
                 <button class="focus:outline-none" id="menu-toggle">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
@@ -277,112 +269,55 @@
                     </div>
                 </div>
 
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover-scale group"
-                    data-aos="fade-left">
-                    <div
-                        class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-tasks text-6xl text-white z-10"></i>
-                        <div class="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-opacity"></div>
-                        <div class="project-overlay opacity-0 group-hover:opacity-100 transition-opacity">
-                            <a href="projects.html#taskmanager" class="btn btn-primary px-6 py-2 rounded-full">
-                                View Project
-                            </a>
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl transform transition-all duration-300 hover:scale-[1.02] group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-48 md:h-56 bg-gradient-to-r from-green-500 to-teal-500 overflow-hidden">
+                        <!-- Background Icon -->
+                        <div class="absolute inset-0 flex items-center justify-center opacity-30">
+                            <i class="fas fa-tasks text-8xl md:text-9xl text-white"></i>
+                        </div>
+
+                        <!-- Overlay Content -->
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                            <div
+                                class="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 opacity-0 group-hover:opacity-100">
+                                <a href="projects.html#taskmanager"
+                                    class="btn btn-primary px-6 py-2 rounded-full text-sm md:text-base">
+                                    View Project
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold mb-2 text-white">WayToCode ERP Web Application</h3>
-                        <p class="text-gray-300 mb-4">Designed and developed responsive, user-friendly web interfaces
-                            for employee and admin
-                            dashboards using HTML, CSS, JavaScript, and modern UI frameworks.</p>
+
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 text-white">WayToCode ERP Web Application</h3>
+                        <p class="text-gray-300 text-sm md:text-base mb-4 leading-relaxed">
+                            Designed and developed responsive, user-friendly web interfaces for employee and admin
+                            dashboards using HTML, CSS, JavaScript, and modern UI frameworks.
+                        </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-badge bg-green-900">HTML5</span>
-                            <span class="skill-badge bg-green-900">CSS3</span>
-                            <span class="skill-badge bg-green-900">JavaScript</span>
-                            <span class="skill-badge bg-green-900">Bootstrap</span>
-                            <span class="skill-badge bg-green-900">Tailwind CSS</span>
+                            <span class="skill-badge bg-green-900 text-xs md:text-sm">HTML5</span>
+                            <span class="skill-badge bg-green-900 text-xs md:text-sm">CSS3</span>
+                            <span class="skill-badge bg-green-900 text-xs md:text-sm">JavaScript</span>
+                            <span class="skill-badge bg-green-900 text-xs md:text-sm">Bootstrap</span>
+                            <span class="skill-badge bg-green-900 text-xs md:text-sm">Tailwind CSS</span>
                         </div>
                         <a href="https://vandan2931.github.io/ERP-System-WayToCode/"
-                            class="text-blue-400 font-semibold hover:underline inline-flex items-center transition-colors">
+                            class="text-blue-400 font-semibold hover:underline inline-flex items-center text-sm md:text-base transition-colors">
                             View Code <i
                                 class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
                         </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="projects.html" class="btn btn-primary inline-flex items-center">
-                    View All Projects <i class="fas fa-chevron-right ml-2"></i>
-                </a>
+                <div class="text-center mt-12" data-aos="fade-up">
+                    <a href="projects.html" class="btn btn-primary inline-flex items-center">
+                        View All Projects <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
             </div>
-        </div>
     </section>
-
-    <!-- Testimonials
-    <section class="section bg-gray-800/50 backdrop-blur-sm">
-        <div class="container mx-auto px-4">
-            <div class="section-title" data-aos="fade-up">
-                <h2 class="gradient-text">What People Say</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Don't just take my word for it. Here's what my colleagues and clients have to say:</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <p class="text-gray-300 italic">"Vandan's attention to detail in UI implementation is exceptional. He consistently delivers pixel-perfect designs that work flawlessly across all devices."</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="testimonial-avatar">
-                        <div>
-                            <h4 class="text-white font-semibold">John Doe</h4>
-                            <p class="text-gray-400 text-sm">UI/UX Designer at DesignCo</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                    <p class="text-gray-300 italic">"Working with Vandan was a pleasure. He quickly translates design mockups into functional, accessible web applications with clean, maintainable code."</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Alice Smith" class="testimonial-avatar">
-                        <div>
-                            <h4 class="text-white font-semibold">Alice Smith</h4>
-                            <p class="text-gray-400 text-sm">Project Manager at WebSolutions</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card glass-card" data-aos="fade-up" data-aos-delay="300">
-                    <p class="text-gray-300 italic">"Vandan's React components are well-structured and documented. His performance optimizations significantly improved our application's loading times."</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Robert Johnson" class="testimonial-avatar">
-                        <div>
-                            <h4 class="text-white font-semibold">Robert Johnson</h4>
-                            <p class="text-gray-400 text-sm">Tech Lead at Startup Innovations</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Call to Action -->
     <section class="section bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -465,40 +400,6 @@
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
-
-        // Theme toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-        const themeIcon = document.getElementById('theme-icon');
-        const themeIconMobile = document.getElementById('theme-icon-mobile');
-        const html = document.documentElement;
-
-        function toggleTheme() {
-            const isDark = html.getAttribute('data-theme') === 'dark';
-            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-
-            themeIcon.classList.toggle('fa-moon', !isDark);
-            themeIcon.classList.toggle('fa-sun', isDark);
-            themeIconMobile.classList.toggle('fa-moon', !isDark);
-            themeIconMobile.classList.toggle('fa-sun', isDark);
-
-            localStorage.setItem('theme', isDark ? 'light' : 'dark');
-        }
-
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme') ||
-            (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-        html.setAttribute('data-theme', savedTheme);
-
-        if (savedTheme === 'light') {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-            themeIconMobile.classList.remove('fa-moon');
-            themeIconMobile.classList.add('fa-sun');
-        }
-
-        themeToggle.addEventListener('click', toggleTheme);
-        themeToggleMobile.addEventListener('click', toggleTheme);
 
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
