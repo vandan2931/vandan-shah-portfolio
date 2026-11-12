@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vandan Shah | Front-End Developer</title>
-    <meta name="description"
-        content="Vandan Shah - Front-End Developer specializing in building responsive, accessible web applications with modern JavaScript frameworks and CSS.">
-    <meta name="keywords" content="Front-End Developer, Web Developer, React, JavaScript, HTML, CSS, Tailwind, UI/UX">
+    <title>Vandan Shah | Shopify Developer</title>
+    <meta name="description" content="Vandan Shah - Shopify Developer specializing in custom Shopify themes, Liquid templates, e-commerce UI/UX, Storefront APIs, and high-converting online stores.">
+    <meta name="keywords" content="Shopify Developer, Liquid, E-Commerce, Custom Shopify Themes, Storefront API, Next.js, React.js, Tailwind CSS, Node.js">
     <meta name="author" content="Vandan Shah">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vandan Shah | Shopify Developer">
+    <meta property="og:description" content="Shopify Developer building custom Liquid storefronts and high-converting e-commerce experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vandan2931.github.io/vandan-shah-portfolio/">
+    <meta property="og:image" content="assets/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
@@ -25,587 +31,333 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 font-space">
+<body class="bg-gray-900 text-gray-100">
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Loading Screen -->
-    <div id="loading"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 transition-opacity duration-500">
-        <div class="loader">
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
+    <div id="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 transition-opacity duration-500">
+        <div class="loader flex space-x-2">
+            <div class="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
+            <div class="w-4 h-4 bg-green-500 rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+            <div class="w-4 h-4 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.4s;"></div>
         </div>
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="scroll-indicator">
-        <div class="scroll-indicator-bar" id="scrollBar"></div>
-    </div>
+    <div class="scroll-indicator"><div class="scroll-indicator-bar" id="scrollBar"></div></div>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
 
     <!-- Navigation -->
-    <nav class="bg-gray-800/90 text-white p-4 sticky top-0 z-40 backdrop-blur-md shadow-lg">
+    <nav class="bg-gray-800 bg-opacity-90 text-white p-4 sticky top-0 z-40 backdrop-blur-md border-b border-gray-700">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold gradient-text hover:scale-105 transition-transform">Vandan
-                Shah</a>
+            <a href="index.html" class="text-2xl font-bold gradient-text hover:scale-105 transition-transform">Vandan Shah</a>
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="nav-link hover:text-blue-400">Home</a>
+                <a href="index.html" class="nav-link active text-blue-400" aria-current="page">Home</a>
                 <a href="about.html" class="nav-link hover:text-blue-400">About</a>
                 <a href="resume.html" class="nav-link hover:text-blue-400">Resume</a>
                 <a href="projects.html" class="nav-link hover:text-blue-400">Projects</a>
+                <a href="shopify-work.html" class="nav-link hover:text-blue-400">Shopify Work</a>
                 <a href="contact.html" class="nav-link hover:text-blue-400">Contact</a>
             </div>
-            <div class="flex items-center space-x-4 md:hidden">
-                <button class="focus:outline-none" id="menu-toggle">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-gray-700/90 backdrop-blur-md" id="mobile-menu">
-            <div class="flex flex-col space-y-3 p-4">
-                <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
-                <a href="about.html" class="hover:text-blue-400 transition-colors">About</a>
-                <a href="resume.html" class="hover:text-blue-400 transition-colors">Resume</a>
-                <a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
-                <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a>
+        <div class="md:hidden hidden bg-gray-800 bg-opacity-95" id="mobile-menu">
+            <div class="flex flex-col space-y-2 p-4">
+                <a href="index.html" class="py-2 px-4 bg-gray-700 rounded-lg">Home</a>
+                <a href="about.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg">About</a>
+                <a href="resume.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg">Resume</a>
+                <a href="projects.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg">Projects</a>
+                <a href="shopify-work.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg">Shopify Work</a>
+                <a href="contact.html" class="py-2 px-4 hover:bg-gray-700 rounded-lg">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div id="particles-js" class="absolute inset-0"></div>
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
-        </div>
-
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10" data-aos="fade-up">
-            <div class="md:w-1/2 mb-12 md:mb-0">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
-                    Hi, I'm <span class="gradient-text animate-gradient">Vandan Shah</span>
-                </h1>
-                <h2 class="text-2xl md:text-3xl mb-6 text-blue-300 font-medium">Front-End Developer</h2>
-                <p class="text-lg mb-8 text-gray-300 max-w-lg leading-relaxed">
-                    Creating beautiful, responsive, and accessible web experiences with modern JavaScript and CSS
-                    frameworks.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="projects.html" class="btn btn-primary transform hover:-translate-y-1">
-                        View My Work <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="contact.html" class="btn btn-secondary transform hover:-translate-y-1">
-                        Contact Me <i class="fas fa-paper-plane ml-2"></i>
-                    </a>
-                </div>
-
-                <div class="mt-12 flex items-center space-x-6">
-                    <div class="flex -space-x-2">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
-                            class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 1">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
-                            class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 2">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg"
-                            class="w-10 h-10 rounded-full border-2 border-gray-800" alt="Client 3">
+    <main id="main">
+        <!-- Hero -->
+        <section id="hero" class="relative py-20 md:py-12 bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 overflow-hidden">
+            <div id="particles-js" class="absolute inset-0 z-0"></div>
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10" data-aos="fade-up">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
+                        Hi, I'm <span class="gradient-text">Vandan Shah</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl mb-4 text-blue-300 font-medium">Shopify Developer</h2>
+                    <p class="text-base text-gray-400 mb-6 flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-blue-400"></i> Ahmedabad, Gujarat, India
+                    </p>
+                    <p class="text-lg mb-8 text-gray-300 max-w-lg leading-relaxed">
+                        I build and optimize production Shopify storefronts with custom Liquid sections, theme customizations, and app integrations — plus full-stack Next.js solutions when a store needs more.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="shopify-work.html" class="btn-primary">View Shopify Work <i class="fas fa-arrow-right"></i></a>
+                        <a href="contact.html" class="btn-secondary">Contact Me <i class="fas fa-envelope"></i></a>
                     </div>
-                    <div>
-                        <p class="text-sm text-gray-400">Trusted by clients worldwide</p>
-                        <div class="flex text-yellow-400 text-sm">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span class="text-gray-400 ml-2">4.8/5</span>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
+                    <div class="profile-image-container hover-scale" style="max-width: 400px; max-height: 400px; width: 100%; height: 100%;">
+                        <img src="vshah.png" alt="Vandan Shah - Shopify Developer" class="profile-image"
+                             onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;w-full h-full flex items-center justify-center text-white text-6xl font-bold&quot;>VS</div>';">
+                    </div>
+                </div>
+            </div>
+            <a href="#skills" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-white text-2xl z-10" aria-label="Scroll to skills">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- Shopify proof strip -->
+        <section class="py-12 bg-gray-800/60">
+            <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+                <p class="text-gray-400 uppercase tracking-widest text-sm mb-6">Production stores I've built or customized</p>
+                <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 text-gray-300 font-semibold">
+                    <a href="https://www.wheymill.com/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">WheyMill</a>
+                    <a href="https://boltnutritions.com/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">Bolt Nutritions</a>
+                    <a href="https://evishealthcare.com/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">Evis Healthcare</a>
+                    <a href="https://kttell.com/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">Kttell</a>
+                    <a href="https://avironn.in/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">Avironn</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-16 bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold gradient-text">Technical Skills</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto mt-2">Shopify-first, with strong frontend and backend fundamentals.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="glass-card p-6 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-blue-400 mb-4 text-4xl flex justify-center"><i class="fas fa-store"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-white">Shopify / Liquid</h3>
+                        <p class="text-gray-300 text-center text-sm mb-4">Theme development, custom sections & blocks, cart drawers, metafields, app integration, storefront optimization.</p>
+                        <div class="flex flex-wrap justify-center gap-1">
+                            <span class="skill-badge text-xs">Liquid</span>
+                            <span class="skill-badge text-xs">Sections</span>
+                            <span class="skill-badge text-xs">Apps</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-green-400 mb-4 text-4xl flex justify-center"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-white">Frontend</h3>
+                        <p class="text-gray-300 text-center text-sm mb-4">HTML5, CSS3, JavaScript (ES6+), React.js, Next.js, Tailwind CSS, Bootstrap, Flexbox & Grid.</p>
+                        <div class="flex flex-wrap justify-center gap-1">
+                            <span class="skill-badge text-xs">React.js</span>
+                            <span class="skill-badge text-xs">Next.js</span>
+                            <span class="skill-badge text-xs">Tailwind</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-purple-400 mb-4 text-4xl flex justify-center"><i class="fas fa-server"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-white">Backend</h3>
+                        <p class="text-gray-300 text-center text-sm mb-4">Node.js, Next.js API routes, REST APIs, Express.js. Additional Java/JSP/Servlet experience.</p>
+                        <div class="flex flex-wrap justify-center gap-1">
+                            <span class="skill-badge text-xs">Node.js</span>
+                            <span class="skill-badge text-xs">REST APIs</span>
+                            <span class="skill-badge text-xs">Java</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-yellow-400 mb-4 text-4xl flex justify-center"><i class="fas fa-database"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-center text-white">Databases & Tools</h3>
+                        <p class="text-gray-300 text-center text-sm mb-4">MySQL, Git, GitHub, VS Code, NetBeans, Shopify CLI, Theme Check.</p>
+                        <div class="flex flex-wrap justify-center gap-1">
+                            <span class="skill-badge text-xs">MySQL</span>
+                            <span class="skill-badge text-xs">Git</span>
+                            <span class="skill-badge text-xs">Shopify CLI</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
-                <div
-                    class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl hover-scale relative group">
-                    <div class="w-full h-full bg-gray-800 flex items-center justify-center">
-                        <img src="profile1.JPG" alt="Vandan Shah - Front-End Developer">
-                    </div>
+        <!-- Experience -->
+        <section id="experience" class="py-16 bg-gray-900/60">
+            <div class="container mx-auto px-4">
+                <div class="text-center" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold gradient-text">Professional Experience</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto mt-2">E-commerce storefront development and scalable frontend applications.</p>
                 </div>
-            </div>
-        </div>
-
-        <a href="#skills"
-            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white text-2xl">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </section>
-
-    <!-- Skills Highlights -->
-    <section id="skills" class="section bg-gray-800/50 backdrop-blur-sm">
-        <div class="container mx-auto px-4">
-            <div class="section-title" data-aos="fade-up">
-                <h2 class="gradient-text">Technical Expertise</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">I specialize in modern front-end technologies to create
-                    engaging user experiences:</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-center text-white">React</h3>
-                    <p class="text-gray-300 text-center">Hooks, Context, Redux</p>
-                    <div class="mt-6">
-                        <div class="flex justify-between mb-1">
-                            <span class="text-sm text-gray-400">Expertise</span>
-                            <span class="text-sm font-medium text-blue-400">90%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-blue-500 h-2 rounded-full progress-bar-fill" style="width: 90%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-center text-white">JavaScript</h3>
-                    <p class="text-gray-300 text-center">ES6+, javaScript, React.js</p>
-                    <div class="mt-6">
-                        <div class="flex justify-between mb-1">
-                            <span class="text-sm text-gray-400">Expertise</span>
-                            <span class="text-sm font-medium text-blue-400">88%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-blue-500 h-2 rounded-full progress-bar-fill" style="width: 88%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-center text-white">CSS & Frameworks</h3>
-                    <p class="text-gray-300 text-center">Tailwind, SASS, Bootstrap</p>
-                    <div class="mt-6">
-                        <div class="flex justify-between mb-1">
-                            <span class="text-sm text-gray-400">Expertise</span>
-                            <span class="text-sm font-medium text-blue-400">92%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-blue-500 h-2 rounded-full progress-bar-fill" style="width: 92%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-center text-white">Responsive Design</h3>
-                    <p class="text-gray-300 text-center">Mobile-first, Accessibility</p>
-                    <div class="mt-6">
-                        <div class="flex justify-between mb-1">
-                            <span class="text-sm text-gray-400">Expertise</span>
-                            <span class="text-sm font-medium text-blue-400">95%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-blue-500 h-2 rounded-full progress-bar-fill" style="width: 95%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects -->
-    <section class="section bg-gray-900/50 backdrop-blur-sm">
-        <div class="container mx-auto px-4">
-            <div class="section-title" data-aos="fade-up">
-                <h2 class="gradient-text">Featured Projects</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Here are some of my recent projects that showcase my
-                    front-end development skills</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover-scale group"
-                    data-aos="fade-right">
-                    <div
-                        class="h-48 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-shopping-cart text-6xl text-white z-10"></i>
-                        <div class="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-opacity"></div>
-                        <div class="project-overlay opacity-0 group-hover:opacity-100 transition-opacity">
-                            <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank"
-                                class="btn btn-primary px-6 py-2 rounded-full">
-                                Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold mb-2 text-white">Amazon.in Clone</h3>
-                        <p class="text-gray-300 mb-4">A responsive Amazon-style e-commerce web app with product layout,
-                            categories, and user authentication.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-badge">HTML5</span>
-                            <span class="skill-badge">Tailwind CSS</span>
-                            <span class="skill-badge">JavaScript</span>
-                            <span class="skill-badge">Responsive Design</span>
-                        </div>
-                        <a href="https://vandan2931.github.io/Amazon.in-Clone/amazon.html" target="_blank"
-                            class="text-blue-400 font-semibold hover:underline inline-flex items-center transition-colors">
-                            Live Demo <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-2xl transform transition-all duration-300 hover:scale-[1.02] group"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative h-48 md:h-56 bg-gradient-to-r from-green-500 to-teal-500 overflow-hidden">
-                        <!-- Background Icon -->
-                        <div class="absolute inset-0 flex items-center justify-center opacity-30">
-                            <i class="fas fa-tasks text-8xl md:text-9xl text-white"></i>
-                        </div>
-
-                        <!-- Overlay Content -->
-                        <div
-                            class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                            <div
-                                class="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 opacity-0 group-hover:opacity-100">
-                                <a href="projects.html#taskmanager"
-                                    class="btn btn-primary px-6 py-2 rounded-full text-sm md:text-base">
-                                    View Project
-                                </a>
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="glass-card p-6 rounded-2xl" data-aos="fade-right">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-2xl flex-shrink-0"><i class="fas fa-shopping-cart"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Shopify Developer</h3>
+                                <p class="text-blue-300 text-sm">Evis Healthcare Limited · Ahmedabad, Gujarat, India</p>
+                                <p class="text-gray-400 text-xs mt-1">September 2025 – Present</p>
                             </div>
                         </div>
+                        <ul class="mt-4 space-y-2 text-gray-300 text-sm leading-relaxed list-disc list-inside">
+                            <li>Developed and customized production Shopify storefronts using Liquid, HTML5, CSS3, and JavaScript.</li>
+                            <li>Built custom sections, product/collection pages, cart drawers, banners, and responsive layouts.</li>
+                            <li>Integrated third-party Shopify apps and custom functionality.</li>
+                            <li>Optimized storefront performance, mobile responsiveness, and UX.</li>
+                            <li>Implemented JavaScript-based interactive features for tailored storefront interactions.</li>
+                        </ul>
                     </div>
-
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold mb-2 text-white">WayToCode ERP Web Application</h3>
-                        <p class="text-gray-300 text-sm md:text-base mb-4 leading-relaxed">
-                            Designed and developed responsive, user-friendly web interfaces for employee and admin
-                            dashboards using HTML, CSS, JavaScript, and modern UI frameworks.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-badge bg-green-900 text-xs md:text-sm">HTML5</span>
-                            <span class="skill-badge bg-green-900 text-xs md:text-sm">CSS3</span>
-                            <span class="skill-badge bg-green-900 text-xs md:text-sm">JavaScript</span>
-                            <span class="skill-badge bg-green-900 text-xs md:text-sm">Bootstrap</span>
-                            <span class="skill-badge bg-green-900 text-xs md:text-sm">Tailwind CSS</span>
+                    <div class="glass-card p-6 rounded-2xl" data-aos="fade-left" data-aos-delay="100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-2xl flex-shrink-0"><i class="fas fa-code"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Frontend Developer</h3>
+                                <p class="text-blue-300 text-sm">Way To Code Technologies LLP · Ahmedabad, Gujarat, India</p>
+                                <p class="text-gray-400 text-xs mt-1">July 2024 – September 2025</p>
+                            </div>
                         </div>
-                        <a href="https://vandan2931.github.io/ERP-System-WayToCode/"
-                            class="text-blue-400 font-semibold hover:underline inline-flex items-center text-sm md:text-base transition-colors">
-                            View Code <i
-                                class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </a>
+                        <ul class="mt-4 space-y-2 text-gray-300 text-sm leading-relaxed list-disc list-inside">
+                            <li>Developed responsive web applications using React.js, Next.js, JavaScript, HTML5, and CSS3.</li>
+                            <li>Built mobile-first, cross-browser compatible interfaces with reusable components.</li>
+                            <li>Converted Figma designs into high-performance pages.</li>
+                            <li>Improved DOM performance through clean code practices.</li>
+                            <li>Managed codebase and collaboration using Git and GitHub.</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="text-center mt-12" data-aos="fade-up">
-                    <a href="projects.html" class="btn btn-primary inline-flex items-center">
-                        View All Projects <i class="fas fa-chevron-right ml-2"></i>
-                    </a>
+        <!-- Featured projects (teaser) -->
+        <section id="projects" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold gradient-text">Featured Projects</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto mt-2">A few highlights — see the full list on the Projects page.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div class="glass-card rounded-xl overflow-hidden hover-scale p-8" data-aos="fade-right">
+                        <div class="h-16 w-16 bg-blue-600/20 text-blue-400 rounded-lg flex items-center justify-center text-3xl mb-6"><i class="fas fa-shopping-bag"></i></div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-widest mb-1 block">Evis Healthcare Limited</span>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Shopify E-Commerce Store Development</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">Custom Shopify storefronts for WheyMill, Bolt Nutritions, Evis Healthcare, Kttell, and Avironn — custom sections, cart drawers, PDPs, collection pages, and mobile-first layouts.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge">Shopify</span>
+                            <span class="skill-badge">Liquid</span>
+                            <span class="skill-badge">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl overflow-hidden hover-scale p-8" data-aos="fade-left">
+                        <div class="h-16 w-16 bg-green-600/20 text-green-400 rounded-lg flex items-center justify-center text-3xl mb-6"><i class="fas fa-users-cog"></i></div>
+                        <span class="text-xs font-semibold text-green-400 uppercase tracking-widest mb-1 block">Evis Healthcare Limited</span>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Influencer Portal</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">Collaboration portals for influencer campaigns, requests, and approvals for Kttell and Bolt Nutritions — Node.js and Next.js API routes.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge">Node.js</span>
+                            <span class="skill-badge">Next.js</span>
+                            <span class="skill-badge">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="projects.html" class="btn-secondary">See All Projects <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-    </section>
+        </section>
 
-    <!-- Call to Action -->
-    <section class="section bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build Something Amazing?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Let's collaborate on your next project. I'm
-                available for freelance work and full-time positions.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="contact.html"
-                    class="btn btn-primary bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-700 px-8 py-3">
-                    Get In Touch <i class="fas fa-paper-plane ml-2"></i>
-                </a>
-                <a href="resume.html" class="btn btn-secondary border-white text-white hover:bg-white/10 px-8 py-3">
-                    View Resume <i class="fas fa-file-alt ml-2"></i>
-                </a>
+        <!-- Education -->
+        <section id="education" class="py-16 bg-gray-800">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold gradient-text">Education & Background</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-card p-6 rounded-2xl" data-aos="fade-right">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-2xl"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Bachelor of Engineering</h3>
+                                <p class="text-sm text-blue-300">Computer Science and Engineering</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-2">Narnarayan Shastri Institute of Technology, Ahmedabad, India</p>
+                        <p class="text-gray-400 text-xs">Graduated: 2023 | CGPA: 7.20 / 10.0</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl" data-aos="fade-left">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-2xl"><i class="fas fa-language"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Languages & Communication</h3>
+                                <p class="text-sm text-green-300">Multilingual Capabilities</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="skill-badge text-sm"><i class="fas fa-check text-green-400 mr-1"></i> English</span>
+                            <span class="skill-badge text-sm"><i class="fas fa-check text-green-400 mr-1"></i> Hindi</span>
+                            <span class="skill-badge text-sm"><i class="fas fa-check text-green-400 mr-1"></i> Gujarati</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+            <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Build or Upgrade Your Storefront?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">Let's collaborate on custom Liquid themes, section customizations, app integrations, or Next.js web development.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="mailto:vandanshah074@gmail.com" class="btn-light">Get In Touch <i class="fas fa-paper-plane"></i></a>
+                    <a href="resume.html" class="btn-secondary border-white text-white hover:bg-white/10">View Resume <i class="fas fa-file-alt"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
+    <footer class="bg-gray-800 text-white py-12 border-t border-gray-700">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row justify-between items-center">
                 <div class="mb-8 lg:mb-0 text-center lg:text-left">
                     <h3 class="text-2xl font-bold gradient-text mb-2">Vandan Shah</h3>
-                    <p class="text-gray-400">Front-End Developer</p>
-                    <p class="text-gray-500 mt-4">Creating beautiful digital experiences.</p>
+                    <p class="text-gray-400">Shopify Developer</p>
+                    <p class="text-gray-500 mt-2 text-sm">Building scalable, high-converting e-commerce experiences.</p>
                 </div>
                 <div class="mb-8 lg:mb-0">
-                    <h4 class="text-lg font-semibold mb-4 text-center">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 text-center">Quick Navigation</h4>
                     <div class="flex flex-wrap justify-center gap-4">
                         <a href="index.html" class="text-gray-400 hover:text-blue-400 transition">Home</a>
                         <a href="about.html" class="text-gray-400 hover:text-blue-400 transition">About</a>
                         <a href="resume.html" class="text-gray-400 hover:text-blue-400 transition">Resume</a>
                         <a href="projects.html" class="text-gray-400 hover:text-blue-400 transition">Projects</a>
+                        <a href="shopify-work.html" class="text-gray-400 hover:text-blue-400 transition">Shopify Work</a>
                         <a href="contact.html" class="text-gray-400 hover:text-blue-400 transition">Contact</a>
                     </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-center">Connect With Me</h4>
                     <div class="flex justify-center space-x-6">
-                        <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank"
-                            class="text-gray-400 hover:text-blue-400 transition text-2xl transform hover:-translate-y-1">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/vandan2931" target="_blank"
-                            class="text-gray-400 hover:text-white transition text-2xl transform hover:-translate-y-1">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:vandanshah074@gmail.com"
-                            class="text-gray-400 hover:text-red-400 transition text-2xl transform hover:-translate-y-1">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                        <a href="https://www.linkedin.com/in/vandan-shah-0884a0258" target="_blank" rel="noopener" class="text-gray-400 hover:text-blue-400 transition text-2xl" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/vandan2931" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition text-2xl" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:vandanshah074@gmail.com" class="text-gray-400 hover:text-red-400 transition text-2xl" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500">
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
                 <p>&copy; <span id="current-year"></span> Vandan Shah. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
     <script>
-        // Loading screen
         window.addEventListener('load', function () {
             setTimeout(function () {
-                document.getElementById('loading').style.opacity = '0';
-                setTimeout(function () {
-                    document.getElementById('loading').style.display = 'none';
-                }, 500);
-            }, 1000);
-        });
-
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Initialize AOS animations
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100
-        });
-
-        // Initialize particles.js
-        if (document.getElementById('particles-js')) {
-            particlesJS('particles-js', {
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#3b82f6"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 5
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#3b82f6",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 2,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "grab"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 140,
-                            "line_linked": {
-                                "opacity": 1
-                            }
-                        },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
-                    }
-                },
-                "retina_detect": true
-            });
-        }
-
-        // Scroll indicator
-        window.addEventListener('scroll', function () {
-            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollProgress = (scrollTop / scrollHeight) * 100;
-            document.getElementById('scrollBar').style.width = scrollProgress + '%';
-        });
-
-        // Back to top button
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-
-        backToTop.addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Animate progress bars when they come into view
-        const progressBars = document.querySelectorAll('.progress-bar-fill');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const width = entry.target.style.width;
-                    entry.target.style.width = '0';
-                    setTimeout(() => {
-                        entry.target.style.width = width;
-                    }, 100);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        progressBars.forEach(bar => {
-            observer.observe(bar);
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Highlight active nav link
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', function () {
-            let current = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}` ||
-                    (current === '' && link.getAttribute('href') === 'index.html')) {
-                    link.classList.add('active');
-                }
-            });
+                var l = document.getElementById('loading');
+                if (!l) return;
+                l.style.opacity = '0';
+                setTimeout(function () { l.style.display = 'none'; }, 500);
+            }, 500);
         });
     </script>
 </body>
-
 </html>
